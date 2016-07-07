@@ -1,0 +1,14 @@
+// Coloque su configuración en este archivo para sobrescribir la configuración predeterminada y de usuario.
+{
+    // Insertar espacios al presionar TAB.
+    "editor.insertSpaces": false,
+
+    // Al abrir un archivo, se detectarán `editor.tabSize` y `editor.insertSpaces` en función del contenido del archivo.
+    "editor.detectIndentation": false,
+
+	// Controla si el editor debe dar formato automáticamente a la línea después de escribirla
+    "editor.formatOnType": true,
+
+	// Controla si el editor debe representar los espacios en blanco
+    "editor.renderWhitespace": true
+}
