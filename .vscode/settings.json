@@ -10,5 +10,13 @@
     "editor.formatOnType": true,
 
 	// Controla si el editor debe representar los espacios en blanco
-    "editor.renderWhitespace": true
+    "editor.renderWhitespace": true,
+
+	// Excluir archivos generados
+	"files.exclude": {
+		"**/.git": true,
+		"**/*.js": true,
+		"**/*.map": true,
+		"**/.DS_Store": true
+	}
 }
