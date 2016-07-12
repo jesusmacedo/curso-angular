@@ -15,8 +15,10 @@
 	// Excluir archivos generados
 	"files.exclude": {
 		"**/.git": true,
-		"**/*.js": true,
-		"**/*.map": true,
+		"app/*.js": true,
+		"app/*.map": true,
+		"app/*/*.js": true,
+		"app/*/*.map": true,
 		"**/.DS_Store": true
 	}
 }
