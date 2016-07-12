@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { ProductListComponent } from './products/product-list.component';
 
+import { ProductService } from './products/product.service';
+
 @Component({
 	selector: 'pm-app',
 	template: `
@@ -10,7 +12,8 @@ import { ProductListComponent } from './products/product-list.component';
             <pm-products></pm-products>
         </div>
 	`,
-	directives: [ProductListComponent] 
+	directives: [ProductListComponent],
+	providers: [ProductService] 
 })
 	
 export class AppComponent {
