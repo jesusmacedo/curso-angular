@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 import { IProduct } from './product';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { StarComponent } from '../shared/star.component';
-
 import { ProductService } from './product.service';
 
 @Component({
-	selector: 'pm-products',
 	templateUrl: 'app/products/product-list.component.html',
 	styleUrls: ['app/products/product-list.component.css'],
 	pipes: [ProductFilterPipe],
-	directives: [StarComponent]
+	directives: [StarComponent, ROUTER_DIRECTIVES]
 })
-
 export class ProductListComponent implements OnInit {
 	pageTitle: string = 'Product List';
 	imageWidth: number = 50;
@@ -23,7 +21,7 @@ export class ProductListComponent implements OnInit {
 	products: IProduct[];
 	errorMessage: string;
 
-	constructor(private _productService: ProductService){ }
+	constructor(private router: Router, private _productService: ProductService){ }
 
 	ngOnInit(): void {
 		this._productService.getProducts()
